@@ -3,8 +3,15 @@
 import math
 
 def recipe_batches(recipe, ingredients):
-  pass 
+  count = []
+  batches_count = 0
 
+  if len(recipe) != len(ingredients):
+    return batches_count
+  for ingredient in recipe:
+    count.append(ingredients[ingredient] // recipe[ingredient])
+  batches_count = min(count)
+  return batches_count
 
 if __name__ == '__main__':
   # Change the entries of these dictionaries to test 
